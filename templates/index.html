@@ -48,7 +48,7 @@
                 <div class="alert alert-{{ message.tags }}">{{ message }}</div>
         {% endfor %}
     {% endif %}
-    <form action="" method="POST" enctype="multipart/form-data">
+    <form method="POST" enctype="multipart/form-data">
        
       {% csrf_token %}
       <!-- {{ form }} -->
@@ -65,7 +65,7 @@
         <label for="doc"></label>
         <input type="file" name="doc" placeholder="upload only csv file" >
         <br>
-        <a href="/templates/sample-data.csv" download="sample-data.csv">
+        <a href="/static/sampleData.csv" download>
             click here to download sample data file
         </a>
         <button class="submit-btn" style="margin-top:30px">Submit</button>
